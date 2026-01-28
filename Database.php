@@ -10,6 +10,5 @@ class Database{
         $statement = $this->pdo->prepare($sql);
         $statement->execute($params); 
         return $statement;
-
     }
 }
