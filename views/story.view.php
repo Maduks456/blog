@@ -1,4 +1,5 @@
-<?php require "components/header.php"; ?>
+
+<?php ob_start();?>
     <?php require "components/navbar.php"; ?>
     <h1>Blogu revolūcija: populārās blogu platformas <em><?=$title?></em> stāsts</h1>
 
@@ -7,4 +8,6 @@
     <p><?=$title?> ir blogošanas platforma, kas pilnībā mainījusi veidu, kā mēs blogojam un patērējam saturu. <?=$title?> ne tikai izceļas ar vizuāli pievilcīgu, modernu un lietotājam draudzīgu interfeisu, bet piedāvā arī inovatīvas funkcijas, kas pārspēj esošo konkurenci. $title ir vairāk nekā tikai blogošanas platforma - tā ir pilnīga kopiena.</p>
 
     <p>Pateicoties programmētāju talantam un neatlaidībai, <?=$title?> ļoti īsā laikā kļuvusi par Latvijā vadošo blogošanas platformu. Lietotāju skaits strauji pieaug, jo cilvēki no visas Latvijas novērtē iespējas, ko piedāvā <?=$title?>, un platformas radīto ciešo saikni starp rakstniekiem un lasītājiem.</p>
-<?php require "components/footer.php"; ?>
+<?php $content = ob_get_contents();?>
+<?php ob_end_clean();?>
+<?php require "components/layout.php"; ?>

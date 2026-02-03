@@ -1,5 +1,6 @@
-<?php require "components/header.php"; ?>
-    <?php require "components/navbar.php"; ?>
+
+<?php require "components/navbar.php"; ?>
+<?php ob_start();?>
     <h1>Kategorijas</h1>
     <form>
         <input name='search_query' value='<?= $_GET["search_query"] ?? "" ?>'/> 
@@ -14,4 +15,6 @@
     <?php } ?>
     </ul>
     <?php } ?>
-<?php require "components/footer.php"; ?>
+<?php $content = ob_get_contents();?>
+<?php ob_end_clean();?>
+<?php require "components/layout.php"; ?>
