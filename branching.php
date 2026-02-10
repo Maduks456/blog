@@ -7,8 +7,9 @@ $x = "Kaķene";
 } else {
   $y = "Ups!";
 }*/
-// pārbauda  vai pārbaude ir patiesa  
+// pārbauda  vai pārbaude ir patiesa  ternārais operators
 //$y = isset($x) ? $x : "Ups!";
+// null-coalescing operators
 $y = $x ?? "Ups!";
 // Šis jau ārpus paša if, vienkārši parādu, ka izvadu $y
 dd($y);
