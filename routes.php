@@ -5,6 +5,7 @@ return [
     "/show" => "controllers/posts/show.php",
     "/about" => "controllers/story.php",
     "/categories" => "controllers/categories.php",
-    "/edit" => "controllers/posts/edit.php"
+    "/edit" => "controllers/posts/edit.php",
+    "/delete" => "controllers/posts/delete.php"
     // Turpini te likt maršrutus
 ];

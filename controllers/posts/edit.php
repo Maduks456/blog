@@ -17,13 +17,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
     }
     if(!Validator::number($_POST["id"])){
-        $errors["content"] = "Saturam jābūt ciparam un jābūt datubāzē";
+        $errors["id"] = "Saturam jābūt ciparam un jābūt datubāzē";
     }
     if (empty($errors)) {
         $sql = "UPDATE posts SET content = :content WHERE id = :id";
         $params = ["content" => $_POST["content"], "id" =>$_POST["id"]];
         $db->query($sql,$params);
-        header("Location: /show?=" . $_POST["id"]); 
+        header("location: /show?=" . $_POST["id"]); 
         exit();
     }
 }
