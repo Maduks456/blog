@@ -1,26 +1,25 @@
 
 <?php require "views/components/navbar.php"; ?>
     <?php ob_start();?>
-        <h1 class="main_title"><?= htmlspecialchars($post["content"])?></h1>
-        <div class="small_line"></div>
-        <h2 class="main_text"> Kategorija: <?= $post["category_name"] ?></h2>
+        <div>
+            <h1 class="main_title"><?= htmlspecialchars($category["category_name"])?></h1>
+        </div>
         <div class="small_line"></div>
         <div class="main_sigh">
             <div>
-                <a href = "edit?id=<?= $post["id"]?>">
+                <a href = "cat-edit?id=<?= $category["id"]?>">
                     <button>
                         Rediģēt
-                    </button>
+                    </button> 
                 </a>
             </div>
             <div>
-                <form method="POST" action="/delete">
-                    <input name="id" value = <?= $post["id"]?> type="hidden">
+                 <form method="POST" action="/cat-delete">
+                    <input name="id" value = <?= $category["id"]?> type="hidden">
                     <button type="submit">Dzēst</button>
                 </form>
             </div>
         </div>
-        
     <?php $content = ob_get_contents();?>
     <?php ob_end_clean();?>
 <?php require "views/components/layout.php"; ?>

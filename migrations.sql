@@ -5,14 +5,16 @@ USE blog;
 
 CREATE TABLE posts(
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-content VARCHAR(5200) NOT NULL
+content VARCHAR(5200) NOT NULL,
+category_id INT,
+FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
 INSERT INTO posts
-(content)
+(content, category_id)
 VALUES 
-("Lieldienas nāk"),
-("Otrais bloga ieraksts"),
-("Trīs lietas labas lietas");
+("Lieldienas nāk", 1),
+("Otrais bloga ieraksts", 3),
+("Trīs lietas labas lietas", 1);
 SELECT * FROM posts;
 
 CREATE TABLE categories(
