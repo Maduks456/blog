@@ -28,3 +28,14 @@ VALUES
 ("Mūzika"),
 ("Sports");
 SELECT * FROM categories;
+
+CREATE TABLE  comments (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+author VARCHAR(50) NOT NULL,
+creation_time DATETIME NOT NULL,
+content VARCHAR(5000) NOT NULL,
+post_id INT NOT NULL,
+FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+SELECT * FROM comments;

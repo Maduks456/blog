@@ -1,6 +1,6 @@
 <?php require "views/components/navbar.php"; ?>
     <?php ob_start();?>
-        <h1 class="main_title">Rediģet komentāra ierakstu</h1>   
+        <h1 class="main_title">Rediģet kategorijas ierakstu</h1>   
         <div class="small_line"></div>
         <div>
              <form method="POST">

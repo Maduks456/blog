@@ -13,5 +13,9 @@ return [
     "/cat-edit" => "controllers/categories/edit.php",
     "/cat-delete" => "controllers/categories/delete.php",
 
+    "/kom-create" => "controllers/comments/create.php",
+    "/kom-edit" => "controllers/comments/edit.php",
+    "/kom-delete" => "controllers/comments/delete.php",
+
     "/about" => "controllers/story.php"
 ];
