@@ -6,7 +6,14 @@
         <h2 class="main_text"> Kategorija: <?= $post["category_name"] ?></h2>
         <div class="main_sigh">
             <div>
-                <a href = "edit?id=<?= $post["id"]?>">
+            
+               
+               
+               
+               
+               
+               
+               <a href = "edit?id=<?= $post["id"]?>">
                     <button>
                         Rediģēt
                     </button>

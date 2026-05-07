@@ -1,7 +1,6 @@
 
 <?php require "views/components/navbar.php"; ?>
 <?php ob_start();?>
-
     <h1 class="main_title">Emuārs</h1>
     <div class="small_line"></div>
     <div>
