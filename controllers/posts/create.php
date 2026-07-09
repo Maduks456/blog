@@ -21,4 +21,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     }
 }
-require "./views/posts/create.view.php";
+require(__DIR__ . '/../../views/posts/create.view.php');

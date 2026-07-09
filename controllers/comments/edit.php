@@ -36,5 +36,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         exit();
     }
 }
-
-require "./views/comments/edit.view.php";
+require(__DIR__ . '/../../views/comments/edit.view.php');

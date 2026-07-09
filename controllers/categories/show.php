@@ -8,4 +8,4 @@
     if(!$category){
         redirectIfNotFound();
     }
-require "views/categories/show.view.php";
+require(__DIR__ . '/../../views/categories/show.view.php');

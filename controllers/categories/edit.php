@@ -28,4 +28,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 }
 
-require "./views/categories/edit.view.php";
+require(__DIR__ . '/../../views/categories/edit.view.php');

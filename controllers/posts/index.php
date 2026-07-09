@@ -6,4 +6,4 @@ if(isset($_GET["search_query"]) && trim($_GET["search_query"]) != "") {
     $params["search"] = "%" . $_GET["search_query"] . "%";
 }
 $posts = $db->query($sql_query, $params)->fetchAll(PDO::FETCH_ASSOC);
-require "./views/posts/index.view.php";
+require(__DIR__ . '/../../views/posts/index.view.php');

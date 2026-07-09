@@ -14,7 +14,11 @@ class Database {
 
         // Only enforce SSL when not connecting to localhost (e.g. on Vercel/Aiven)
         if ($config['host'] !== 'localhost') {
-            $options[PDO::MYSQL_ATTR_SSL_CA] = __DIR__ . '/certs/aiven-ca.pem';
+            $sslCaConstant = PHP_VERSION_ID >= 80500
+                ? \Pdo\Mysql::ATTR_SSL_CA
+                : PDO::MYSQL_ATTR_SSL_CA;
+
+            $options[$sslCaConstant] = __DIR__ . '/certs/aiven-ca.pem';
         }
 
         $this->pdo = new PDO($dsn, $config['user'], $config['password'], $options);

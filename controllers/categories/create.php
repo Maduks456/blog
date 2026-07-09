@@ -14,4 +14,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         exit();
     }
 }
-require "./views/categories/create.view.php";
+
+require(__DIR__ . '/../../views/categories/create.view.php');

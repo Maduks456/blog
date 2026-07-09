@@ -18,4 +18,4 @@
     if(!$post){
         redirectIfNotFound();
     }
-require "views/posts/show.view.php";
+require(__DIR__ . '/../../views/posts/show.view.php');
