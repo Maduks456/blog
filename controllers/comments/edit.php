@@ -1,7 +1,6 @@
 <?php
 
-
-require "Validator.php";
+require __DIR__ . '/../../Validator.php';
 $pageTitle = "Reģitrēt";
 $customStyles = "komedit.css";
 $errors = [];

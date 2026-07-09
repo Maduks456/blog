@@ -1,6 +1,6 @@
 <?php
 require_once "functions.php";
 require_once "Database.php";
-$config = require "config.php";
+$config = require __DIR__ . '/config.php';
 $db = new Database($config["database"]);
-require "router.php";
+require __DIR__ . '/router.php';

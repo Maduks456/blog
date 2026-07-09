@@ -1,18 +1,11 @@
 
-<?php require "views/components/navbar.php"; ?>
+<?php require __DIR__ . '/../components/navbar.php'; ?>
     <?php ob_start();?>
         <h1 class="main_title"><?= htmlspecialchars($post["content"])?></h1>
         <div class="small_line"></div>
         <h2 class="main_text"> Kategorija: <?= $post["category_name"] ?></h2>
         <div class="main_sigh">
-            <div>
-            
-               
-               
-               
-               
-               
-               
+            <div>  
                <a href = "edit?id=<?= $post["id"]?>">
                     <button>
                         Rediģēt
@@ -83,4 +76,4 @@
         
     <?php $content = ob_get_contents();?>
     <?php ob_end_clean();?>
-<?php require "views/components/layout.php"; ?>
+<?php require __DIR__ . '/../components/layout.php'; ?>

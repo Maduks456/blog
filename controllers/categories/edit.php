@@ -1,5 +1,5 @@
 <?php
-require "Validator.php";
+require __DIR__ . '/../../Validator.php';
 $pageTitle = "Reģitrēt";
 $errors = [];
 if(!isset($_GET["id"]) || $_GET["id"] == ""){

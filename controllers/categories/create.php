@@ -1,5 +1,5 @@
 <?php
-require "Validator.php";
+require __DIR__ . '/../../Validator.php';
 $pageTitle = "Izveidot kategoriju";
 $errors = [];
 if($_SERVER["REQUEST_METHOD"] == "POST"){

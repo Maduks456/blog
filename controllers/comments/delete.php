@@ -1,5 +1,5 @@
 <?php
-    require "Validator.php";
+    require __DIR__ . '/../../Validator.php';
     $errors = [];
     if(!Validator::number($_POST["kom_id"])){
         $errors["kom_id"] = "Saturam jābūt ciparam un jābūt datubāzē";

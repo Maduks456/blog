@@ -1,5 +1,5 @@
 <?php
-require "Validator.php";
+require __DIR__ . '/../../Validator.php';
 $pageTitle = "Reģitrēt";
 $errors = [];
 $sql = "SELECT * FROM categories" ;
