@@ -10,10 +10,10 @@
 ## Features
 <ul>
     <li>
-        Createing/editing/deleting Categories
+        Createing/searching/editing/deleting Categories
     </li>
     <li>
-        Createing/editing/deleting Blog Posts
+        Createing/searching/editing/deleting Blog Posts
     </li>
     <li>
         Createing/editing/deleting Blog Comments
