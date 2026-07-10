@@ -1,19 +1,19 @@
 <?php require __DIR__ . '/../components/navbar.php'; ?>
 <?php ob_start();?>
     <div>
-        <h1 class="main_title">Kategorijas</h1>
+        <h1 class="main_title">Categories</h1>
     </div>
     <div class="small_line"></div>
     <div>
         <form>
             <input name='search_query' value='<?= $_GET["search_query"] ?? "" ?>'/> 
-            <button>Meklēt</button>
+            <button>Search</button>
         </form>
     </div>
     <div class="small_line"></div>
     <div>
         <?php if (count($categories) == 0) { ?>
-            <p>❌ Nav atrasts neviens ieraksts. 😭 Lūdzu, pamēģini citu vārdu vai frāzi 🐣</p>
+            <p>❌ No records found. 😭 Please try another word or phrase.  </p>
         <?php } else { ?>
         <div class="main_table">
             <?php foreach($categories as $category) { ?>

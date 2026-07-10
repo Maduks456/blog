@@ -1,5 +1,5 @@
 <?php
-
+$pageTitle = "Blog";
     if(!isset($_GET["id"]) || $_GET["id"] == ""){
         redirectIfNotFound();
     }

@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../../Validator.php';
-$pageTitle = "Reģitrēt";
+$pageTitle = "Edit Blog";
 $errors = [];
 $sql = "SELECT * FROM categories" ;
 $categories = $db ->query($sql)->fetchAll();
@@ -20,10 +20,10 @@ if(!isset($_GET["id"]) || $_GET["id"] == ""){
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(!Validator::string($_POST['content'], max: 50)){
-        $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
+        $errors["content"] = "Content is needed to be typed, And it isnt longer than 50 simbols";
     }
     if(!Validator::number($_POST["id"])){
-        $errors["id"] = "Saturam jābūt ciparam un jābūt datubāzē";
+        $errors["id"] = "Content is needed to be a number and in the database";
     }
     if (empty($errors)) {
         $sql = "UPDATE posts SET content = :content, category_id= :category_id WHERE id = :id";

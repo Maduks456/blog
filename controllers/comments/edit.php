@@ -19,13 +19,13 @@ if(!isset($_GET["id"]) || $_GET["id"] == "" ){
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(!Validator::string($_POST['author'],min: 1, max: 50)){
-        $errors["author"] = "Autora vārdam jābūt ievadītam, bet ne īsākam par 1 un ne garākam par 50 rakstzīmēm";
+        $errors["author"] = "Autor name is needed to be typed, And it isnt  shorter than 1 and longer than 50 simbols";
     }
     if(!Validator::string($_POST['content'],min: 3, max: 255)){
-        $errors["content"] = "Saturam jābūt ievadītam, bet ne īsākam par 3 un ne garākam par 255 rakstzīmēm";
+        $errors["content"] = "Content is needed to be typed, And it isnt  shorter than 3 and longer than 255 simbols";
     }
     if(!Validator::number($_POST["id"])){
-        $errors["id"] = "Saturam jābūt ciparam un jābūt datubāzē";
+        $errors["id"] = "Content is needed to be a number and in the database";
     }
     if (empty($errors)) {
         $sql = "UPDATE comments SET author = :author, creation_time = NOW(), content= :content WHERE id = :id";

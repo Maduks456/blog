@@ -4,17 +4,17 @@
             <div class="nav_row">
                 <a href="/">
                     <button class="nav_button">
-                        Emuāra ieraksti
+                        Blog List
                     </button>
                 </a>
                 <a href="/categories">
                     <button class="nav_button">
-                        Kategorijas
+                       Categories
                     </button>
                 </a>
                 <a href="/about">
                     <button class="nav_button">
-                        Par mums
+                        About Us
                     </button>
                 </a>
             </div>
@@ -23,12 +23,12 @@
             <div class="nav_row">
                 <a href="/create">
                     <button class="nav_button">
-                        Izveidot Emuāru
+                        Create A Blog
                     </button>
                 </a>
                 <a href="/cat-create">
                     <button class="nav_button">
-                        Izveidot Kategoriju
+                        Create A Categories
                     </button>
                 </a>
             </div>

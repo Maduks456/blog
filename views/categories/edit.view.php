@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/../components/navbar.php'; ?>
     <?php ob_start();?>
-        <h1 class="main_title">Rediģet kategorijas ierakstu</h1>   
+        <h1 class="main_title">Edit A Category</h1>   
         <div class="small_line"></div>
         <div>
              <form method="POST">
@@ -8,7 +8,7 @@
                 <input name="id" value = <?= $category["id"]?> type="hidden">
                 <input name="category_name" value="<?= $_POST['category_name'] ??  $category["category_name"] ?>" />
             </label>
-            <button>Rediģet</button>
+            <button>Edit</button>
         </form>
         </div>
         <div>

@@ -2,7 +2,7 @@
 require __DIR__ . '/../../Validator.php';
     $errors = [];
     if(!Validator::number($_POST["id"])){
-        $errors["id"] = "Saturam jābūt ciparam un jābūt datubāzē";
+        $errors["id"] = "Content is needed to be a number and in the database";
     }
     if(empty($errors)){
         $sql = "DELETE FROM categories WHERE id = :id";

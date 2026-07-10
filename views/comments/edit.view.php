@@ -16,7 +16,7 @@
                             </div>
                             <div>
                                 <button>
-                                    Saglabāt
+                                    Save changes
                                 </button>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                                     <input name="id" value = <?= $comment["post_id"]?> type="hidden">
                                     <input name="kom_id" value = <?= $comment["id"]?> type="hidden">
                                     <button>
-                                        Dzēst
+                                        Delete
                                     </button>   
                                 </form>
                             </div>

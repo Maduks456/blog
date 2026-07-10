@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/../components/navbar.php'; ?>
     <?php ob_start();?>
-        <h1 class="main_title">Rediģet bloga ierakstu</h1>
+        <h1 class="main_title">Edit blog post</h1>
         <div class="small_line"></div>
         
             <div>
@@ -10,14 +10,14 @@
                     <input name="content" value="<?= $_POST['content'] ??  $post["content"] ?>" />
                 </label>
                 <select name="category_id">
-                    <option >-Izvēlies kategoriju-</option>
+                    <option >-Choose A Category-</option>
                     <?php foreach ($categories as $category) { ?>
                         <option value="<?= $category["id"] ?>"<?= $category["id"]==$CategoryNow? "selected" : " "?>> <?= $category["category_name"]?> </option>
                     <?php } ?>
                 </select>
             </div>
             <div>
-                <button> Rediģet</button>
+                <button> Edit</button>
             </div>
             <div>
                 <?php if (isset($errors["content"])){?>

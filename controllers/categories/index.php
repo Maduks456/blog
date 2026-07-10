@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Kategorijas";
+$pageTitle = "Categories";
 $sql_query = "SELECT * FROM categories";
 $params = [];
 if(isset($_GET["search_query"]) && trim($_GET["search_query"]) != "") {

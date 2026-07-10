@@ -9,14 +9,14 @@
             <div>
                 <a href = "cat-edit?id=<?= $category["id"]?>">
                     <button>
-                        Rediģēt
+                        Edit
                     </button> 
                 </a>
             </div>
             <div>
                  <form method="POST" action="/cat-delete">
                     <input name="id" value = <?= $category["id"]?> type="hidden">
-                    <button type="submit">Dzēst</button>
+                    <button type="submit">Delete</button>
                 </form>
             </div>
         </div>

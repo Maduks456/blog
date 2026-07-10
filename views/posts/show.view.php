@@ -3,19 +3,19 @@
     <?php ob_start();?>
         <h1 class="main_title"><?= htmlspecialchars($post["content"])?></h1>
         <div class="small_line"></div>
-        <h2 class="main_text"> Kategorija: <?= $post["category_name"] ?></h2>
+        <h2 class="main_text"> Category: <?= $post["category_name"] ?></h2>
         <div class="main_sigh">
             <div>  
                <a href = "edit?id=<?= $post["id"]?>">
                     <button>
-                        Rediģēt
+                        Edit
                     </button>
                 </a>
             </div>
             <div>
                 <form method="POST" action="/delete">
                     <input name="id" value = <?= $post["id"]?> type="hidden">
-                    <button type="submit">Dzēst</button>
+                    <button type="submit">Delete</button>
                 </form>
             </div>
         </div>
@@ -23,17 +23,17 @@
         <div>
             <form method="POST" action="kom-create">
                 <input name="id" value = <?= $post["id"]?> type="hidden">
-                <label  class="main_text" >Autors:</label>
+                <label  class="main_text" >Author:</label>
                 <input type="text" name="auther">
-                <label  class="main_text" >Komentārs:</label>
+                <label  class="main_text" >Comment:</label>
                 <input type="text" name="saturs">
                 <button>
-                    Komentēt
+                    Send Comment
                 </button>
             </form>
         </div>
         <div>
-            <h2 class="main_text">Komentāri</h2>
+            <h2 class="main_text">Comments</h2>
         </div>
         <div class="small_line"></div>
         <div class="kom">
@@ -50,7 +50,7 @@
                             <div>
                                 <a href = "kom-edit?id=<?= $com["kom_id"]?>">
                                     <button>
-                                        Rediģet
+                                        Edit Comment
                                     </button>
                                 </a>
                             </div>
@@ -64,7 +64,7 @@
                                     <input name="id" value = <?= $post["id"]?> type="hidden">
                                     <input name="kom_id" value = <?= $com["kom_id"]?> type="hidden">
                                     <button>
-                                        Dzēst
+                                        Delete Comment
                                     </button>   
                                 </form>
                             </div>
