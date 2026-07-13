@@ -4,7 +4,10 @@
         <div class="small_line"></div>
         <div>
             <form method="POST">
-                <label><input name="category_name" value="<?= $_POST['category_name'] ?? "" ?>" /></label>
+                <label>
+                    Category name:
+                    <input name="category_name" value="<?= $_POST['category_name'] ?? "" ?>" />
+                </label>
                 <button>Create</button>
             </form>
         </div>

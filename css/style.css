@@ -25,7 +25,7 @@
     border: none;
     color: rgb(235, 228, 228);
     font-size: 20px;
-    width: 200px;
+    width: 220px;
     height: 50px;
     font-family: "Josefin Sans", sans-serif;
  }
@@ -71,7 +71,7 @@
     flex-wrap: wrap;
  }
 .main_table_cell{
-    height: 50px;
+    height: 60px;
     margin:  10px;
 }
 .main_sigh{
@@ -102,8 +102,8 @@
     border: none;
     border-radius: 10px;
     color: rgb(235, 228, 228);
-    width: 130px;
-    height: 50px;
+    width: 150px;
+    height: 60px;
     font-size: 20px;
     font-family: "Josefin Sans", sans-serif;
  }
@@ -148,4 +148,7 @@
  }
  b{
    font-size: 20px;
+ }
+ label{
+   font-size: 25px;
  }

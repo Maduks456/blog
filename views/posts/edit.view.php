@@ -5,16 +5,21 @@
         
             <div>
                 <form method="POST">
-                <label>
-                    <input name="id" value = <?= $post["id"]?> type="hidden">
-                    <input name="content" value="<?= $_POST['content'] ??  $post["content"] ?>" />
-                </label>
-                <select name="category_id">
-                    <option >-Choose A Category-</option>
-                    <?php foreach ($categories as $category) { ?>
-                        <option value="<?= $category["id"] ?>"<?= $category["id"]==$CategoryNow? "selected" : " "?>> <?= $category["category_name"]?> </option>
-                    <?php } ?>
-                </select>
+                     <label>
+                        <input name="id" value = <?= $post["id"]?> type="hidden">
+                        Title:
+                        <input name="title" value="<?= $_POST['title'] ??  $post["title"] ?>" />
+                    </label>
+                    <label>
+                        Content:
+                        <input name="content" value="<?= $_POST['content'] ??  $post["content"] ?>" />
+                    </label>
+                    <select name="category_id">
+                        <option >-Choose A Category-</option>
+                        <?php foreach ($categories as $category) { ?>
+                            <option value="<?= $category["id"] ?>"<?= $category["id"]==$CategoryNow? "selected" : " "?>> <?= $category["category_name"]?> </option>
+                        <?php } ?>
+                    </select>
             </div>
             <div>
                 <button> Edit</button>

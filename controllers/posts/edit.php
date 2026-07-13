@@ -19,15 +19,18 @@ if(!isset($_GET["id"]) || $_GET["id"] == ""){
     $CategoryNow = $_POST["category_id"] ?? $post["category_id"];
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    if(!Validator::string($_POST['content'], max: 50)){
-        $errors["content"] = "Content is needed to be typed, And it isnt longer than 50 simbols";
+    if(!Validator::string($_POST['title'], max: 50)){
+        $errors["title"] = "Title is needed to be typed, And it isnt longer than 50 simbols";
+    }
+    if(!Validator::string($_POST['content'], max: 250)){
+        $errors["content"] = "Content is needed to be typed, And it isnt longer than 250 simbols";
     }
     if(!Validator::number($_POST["id"])){
-        $errors["id"] = "Content is needed to be a number and in the database";
+        $errors["id"] = "Id is needed to be a number and in the database";
     }
     if (empty($errors)) {
-        $sql = "UPDATE posts SET content = :content, category_id= :category_id WHERE id = :id";
-        $params = ["content" => $_POST["content"],"category_id"=> $_POST["category_id"], "id" =>$_POST["id"]];
+        $sql = "UPDATE posts SET title = :title, content = :content, category_id= :category_id WHERE id = :id";
+        $params = ["title" => $_POST["title"],"content" => $_POST["content"],"category_id"=> $_POST["category_id"], "id" =>$_POST["id"]];
         $db->query($sql,$params);
         header("location: /"); 
         exit();

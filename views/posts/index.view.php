@@ -18,7 +18,7 @@
                 <div class="main_table_cell">
                     <a href = "show?id=<?= $post["id"]?>"> 
                     <button>
-                    <?= htmlspecialchars($post["content"]) ?> 
+                    <?= htmlspecialchars($post["title"]) ?> 
                     </button>
                     </a>
                 </div>

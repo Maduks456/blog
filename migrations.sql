@@ -3,7 +3,6 @@ USE blog;
 DROP TABLE IF EXISTS comments;
 DROP TABLE IF EXISTS posts;
 DROP TABLE IF EXISTS categories;
--- Categories first
 CREATE TABLE categories (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     category_name VARCHAR(25) NOT NULL
@@ -11,25 +10,24 @@ CREATE TABLE categories (
 
 INSERT INTO categories (category_name)
 VALUES
-('Svētki'),
-('Mūzika'),
-('Sports');
+('Holiday'),
+('Music'),
+('Sport');
 
--- Posts second
 CREATE TABLE posts (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
     content VARCHAR(5200) NOT NULL,
     category_id INT,
     FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
 
-INSERT INTO posts (content, category_id)
+INSERT INTO posts (title, content, category_id)
 VALUES
-('Lieldienas nāk', 1),
-('Otrais bloga ieraksts', 3),
-('Trīs lietas labas lietas', 1);
+('Easter is comeing','Easter is the colorfull holiday.', 1),
+('Second Blog post','This was the second blog post.', 3),
+('Three things are good things', '3 of something is better than 1 or 2 of it. Like TNT.', 1);
 
--- Comments last
 CREATE TABLE comments (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     author VARCHAR(50) NOT NULL,

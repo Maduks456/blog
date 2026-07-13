@@ -1,9 +1,10 @@
 
 <?php require __DIR__ . '/../components/navbar.php'; ?>
     <?php ob_start();?>
-        <h1 class="main_title"><?= htmlspecialchars($post["content"])?></h1>
+        <h1 class="main_title"><?= htmlspecialchars($post["title"])?></h1>
         <div class="small_line"></div>
         <h2 class="main_text"> Category: <?= $post["category_name"] ?></h2>
+        <h2 class="main_text"> Content: <?= $post["content"] ?></h2>
         <div class="main_sigh">
             <div>  
                <a href = "edit?id=<?= $post["id"]?>">

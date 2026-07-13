@@ -5,6 +5,11 @@
         <div>
             <form method="POST">
             <label>
+                Title:
+                <input name="title" value="<?= $_POST['title'] ?? "" ?>" />
+            </label>
+            <label>
+                Content:
                 <input name="content" value="<?= $_POST['content'] ?? "" ?>" />
             </label>
             <select name="category_id" >
